@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/skin.css">
+    <title>Konversi Suhu</title>
+</head>
+<body>
+    <header>
+        <img src="https://assets-global.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c4652c60ba2_Footer%20logo.svg" alt="Logo">
+    </header>
+    <main>
+        <div class="container">
+            <div class="form-row">
+                <div class="title-container">
+                    <h2>Konversi Suhu</h2>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-container">
+                    <label for="inputNumber">Masukkan angka:</label>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="input-container">
+                    <input type="number" id="inputNumber" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="select-container">
+                    <label for="fromUnit">Dari:</label>
+                    <select id="fromUnit">
+                        <option value="Celsius">Celsius</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                    </select>
+                </div>
+                <button type="button" onclick="resetUnits()">Reset</button>
+                <div class="select-container">
+                    <label for="toUnit">Ke:</label>
+                    <select id="toUnit">
+                        <option value="Celsius">Celsius</option>
+                        <option value="Fahrenheit">Fahrenheit</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="title-container">
+                    <button type="button" onclick="swapUnits()">Tukar</button>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="title-container">
+                    <button type="button" onclick="convertTemperature()">Konversi</button>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="result-container" id="resultBox"></div>
+            </div>
+
+            <div class="form-row">
+                <div class="additional-text-container">
+                    <p>Rumus untuk mengkonversi suhu dari Celsius ke Fahrenheit</p>
+                    <p>Suhu (T) dalam derajat Fahrenheit (°F) sama dengan suhu (T) dalam derajat Celsius (°C) kali 9/5 tambah 32.</p>
+                    <p>T<sub>°F</sub> = (T<sub>°C</sub> x 9/5 + 32)</p>
+                    <br>
+                    <p>Rumus untuk mengonversi suhu dari Fahrenheit ke Celsius</p>
+                    <p>Suhu (T) dalam derajat Celsius (°C) sama dengan suhu (T) dalam derajat Fahrenheit (°F) kurang 32 kali 5/9.</p>
+                    <p>T<sub>°C</sub> = 5/9 (T<sub>°F</sub> - 32)</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="js/brain.js"></script>
+</body>
+</html>
